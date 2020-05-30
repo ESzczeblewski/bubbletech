@@ -1,0 +1,848 @@
+/*
+Logo blue color rgb: #0083bd
+bacground darker color: #f4f4f4
+
+*/
+
+/* ----------------------------------------------- */
+/* BASIC SETUP */
+/* ----------------------------------------------- */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  background-color: #fff;
+  color: rgb(0, 0.514, 0.741);
+  font-family: 'Saira Semi Condensed', 'Arial', sans-serif;
+
+  font-weight: 400;
+  font-size: 20px;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+}
+
+.clearfix {
+  zoom: 1;
+}
+
+.clearfix:after {
+  content: '.';
+  clear: both;
+  display: block;
+  height: 0;
+  visibility: hidden;
+}
+
+/* ----------------------------------------------- */
+/* REUSABLE COMPONENTS */
+/* ----------------------------------------------- */
+
+.row {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.nopadding {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+/* ----- HEADINGS ----- */
+h1 {
+  margin-bottom: 30px;
+  color: #000000;
+  font-size: 220%;
+  word-spacing: 4px;
+  letter-spacing: 1px;
+}
+
+h2 {
+  font-size: 160%;
+}
+
+h3 {
+  font-size: 110%;
+  margin-bottom: 15px;
+  word-spacing: 2px;
+  margin-top: 10px;
+}
+
+h4 {
+  font-size: 85%;
+  margin-bottom: 15px;
+  word-spacing: 2px;
+}
+
+h1:after {
+  display: block;
+  height: 2px;
+  background-color: #0083bd;
+  content: ' ';
+  width: 120px;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+
+/* ----- PARAGRAPHS ----- */
+
+.general-description p {
+  font-size: 95%;
+  line-height: 145%;
+}
+
+.about-cols p,
+.microbubbles-content p {
+  font-size: 90%;
+}
+
+/* ----------------------------------------------- */
+/* HEADER */
+/* ----------------------------------------------- */
+
+/* Main logo */
+.logo-main {
+  float: left;
+  width: 11%;
+  height: auto;
+  padding-left: 15px;
+}
+
+/* Main navi */
+.main-nav {
+  list-style: none;
+  margin-top: 50px;
+  margin-right: 50px;
+  float: right;
+}
+
+.main-nav li {
+  display: inline-block;
+  margin-right: 55px;
+}
+
+.main-nav li a:link,
+.main-nav li a:visited {
+  text-decoration: none;
+  color: #212121;
+  text-transform: uppercase;
+  font-size: 80%;
+}
+
+.main-nav li a:after {
+  transition: all ease-in-out 0.2s;
+  background: none repeat scroll 0 0 #0083bd;
+  content: '';
+  display: block;
+  height: 2px;
+  width: 0;
+}
+
+.main-nav li a:hover:after {
+  width: 100%;
+}
+
+.social-icons {
+  list-style: none;
+  float: right;
+}
+
+.social-icons li {
+  display: inline-block;
+  margin-top: 50px;
+  margin-right: 20px;
+}
+
+.social-icons li a {
+  padding: 15px;
+}
+
+.social-icons li a img {
+  width: 30px;
+  height: auto;
+}
+
+/* Mobile navi */
+
+.mobile-nav-icon {
+  float: right;
+  margin-top: 15px;
+  margin-right: 15px;
+  cursor: pointer;
+}
+
+.mob-icon {
+  font-size: 140%;
+  color: #000000;
+  display: none;
+}
+
+/* Sticky navi */
+.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(244, 244, 244, 0.98);
+  box-shadow: 0 2px 2px #efefef;
+  z-index: 9999;
+}
+
+.sticky .main-nav {
+  margin-top: 25px;
+  font-size: 90%;
+  float: right;
+}
+
+.sticky .logo-main {
+  width: 100px;
+  margin-top: 5px;
+}
+
+.sticky .social-icons li {
+  display: inline-block;
+  margin-top: 20px;
+  margin-right: 20px;
+}
+
+.sticky .navbar-toggler {
+  margin-top: 5%;
+  background-color: rgba(244, 244, 244, 0.98);
+}
+
+/* Icon 1 */
+
+.navbar-toggler {
+  border: none;
+  background: #ffffff;
+  float: right;
+  margin-top: 7%;
+  margin-right: 7%;
+  display: none;
+}
+
+.animated-icon1 {
+  width: 27px;
+  height: 10px;
+  position: relative;
+  margin: 0px;
+  transform: rotate(0deg);
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+}
+
+.animated-icon1 span {
+  display: block;
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  border-radius: 9px;
+  opacity: 1;
+  left: 0;
+  transform: rotate(0deg);
+  transition: 0.25s ease-in-out;
+  background-color: #fff;
+}
+
+.animated-icon1 span {
+  background: #000000;
+}
+
+.animated-icon1 span:nth-child(1) {
+  top: 0px;
+}
+
+.animated-icon1 span:nth-child(2) {
+  top: 10px;
+}
+
+.animated-icon1 span:nth-child(3) {
+  top: 20px;
+}
+
+.animated-icon1.open span:nth-child(1) {
+  top: 11px;
+  transform: rotate(135deg);
+}
+
+.animated-icon1.open span:nth-child(2) {
+  opacity: 0;
+  left: -60px;
+}
+
+.animated-icon1.open span:nth-child(3) {
+  top: 11px;
+  transform: rotate(-135deg);
+}
+
+/* ----------------------------------------------- */
+/* COOKIES INFO */
+/* ----------------------------------------------- */
+
+.cookies {
+  visibility: visible;
+  font-weight: 200;
+  position: fixed;
+  bottom: 0;
+  z-index: 2;
+  width: 100%;
+  height: 35px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  color: #fff;
+  background-color: rgb(0, 49, 70);
+}
+
+.cookies-info {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+
+.btn-sm {
+  margin-right: 2rem;
+}
+
+/* ----------------------------------------------- */
+/* BIG PICTURES */
+/* ----------------------------------------------- */
+.section-big-pictures {
+  position: relative;
+  height: 86vh;
+  width: 100vw;
+  overflow: hidden;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.carousel {
+  width: 100vw;
+  box-shadow: 0px 0px 12px 3px rgba(0, 0, 0, 0.53);
+  background-attachment: fixed;
+}
+
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+  width: 100%;
+  height: 100%;
+  float: left;
+}
+
+.carousel-inner {
+  position: relative;
+}
+
+.item span {
+  position: absolute;
+  color: rgb(255, 255, 255);
+  z-index: 9999;
+  font-size: 4rem;
+  text-align: start;
+  left: 2%;
+  letter-spacing: 2px;
+  padding-top: 25%;
+}
+
+/* ----------------------------------------------- */
+/* ABOUT */
+/* ----------------------------------------------- */
+
+.section-about {
+  padding: 60px 0;
+}
+
+.about-heading {
+  text-align: center;
+}
+
+.general-description {
+  text-align: center;
+  padding: 0 10%;
+}
+
+.about-cols {
+  max-width: 1200px;
+  margin: 50px auto;
+  position: relative;
+  text-align: center;
+}
+
+.about-cols div {
+  padding: 35px;
+}
+
+.about-icon {
+  width: 100px;
+  height: auto;
+}
+
+/* ----------------------------------------------- */
+/* PRODUCTS */
+/* ----------------------------------------------- */
+.section-products {
+  padding: 0 1em;
+  margin-bottom: 2em;
+  display: grid;
+  grid-template-rows: 200px repeat(2, 1fr);
+  justify-content: center;
+  align-items: center;
+}
+
+.products-heading {
+  text-align: center;
+}
+.diffusers__heading,
+.diffusers__steel {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.diffusers,
+.steel {
+  position: relative;
+  background-color: black;
+  background-size: 100%;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-clip: border-box;
+  border-radius: 2em;
+  width: 50em;
+  height: 15em;
+  margin: 0 auto 2em;
+  cursor: pointer;
+  justify-self: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-size ease-in 0.2s;
+  color: #000000;
+}
+
+.diffusers:hover,
+.steel:hover,
+.diffusers:hover span,
+.steel:hover span {
+  background-size: 120%;
+  color: #ffffff67;
+}
+
+.diffusers::before,
+.steel::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.692);
+  transition: background-color ease-in 0.2s;
+  border-radius: 2em;
+  z-index: 99;
+}
+
+.diffusers:hover::before,
+.steel:hover::before,
+.diffusers:focus::before,
+.steel:focus::before {
+  background-color: transparent;
+}
+
+.diffusers {
+  background-image: url(../img/diffusers-main.jpg);
+}
+.steel {
+  background-image: url(../img/ss-steel-main.jpg);
+}
+
+.diffusers__heading,
+.diffusers__steel {
+  color: #ffffff;
+  transition: color ease-in 0.2s;
+  font-size: 3.5rem;
+  letter-spacing: 0.2em;
+  z-index: 999;
+  height: 100%;
+  width: 100%;
+}
+
+/* ----------------------------------------------- */
+/* WHY MICROBUBBLES */
+/* ----------------------------------------------- */
+.section-microbubbles {
+  padding: 60px 0 60px 0;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url(img/why-microbubbles-background.png);
+  background-size: cover;
+  color: #fff;
+  background-attachment: fixed;
+}
+
+.microbubbles-heading {
+  color: #fff;
+  text-align: center;
+  padding-top: 40px;
+}
+
+.microbubbles-content {
+  align-content: center;
+  padding-top: 20px;
+}
+
+.microbubbles-content p {
+  padding: 33px 300px;
+  font-weight: 300;
+}
+
+/* ----------------------------------------------- */
+/* VIDEOS */
+/* ----------------------------------------------- */
+.section-videos {
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background-color: #f4f4f4;
+}
+
+.yt-videos {
+  margin-top: 50px;
+}
+
+.airprax-videos,
+.oxyprax-videos {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+.first-video-apx,
+.first-video-opx {
+  margin-right: 10px;
+}
+
+.second-video-apx,
+.second-video-opx {
+  margin-left: 10px;
+}
+
+/* ----------------------------------------------- */
+/* DISTRIBUTORS */
+/* ----------------------------------------------- */
+.section-distributors {
+  height: 1100px;
+  overflow: hidden;
+  margin-top: 20px;
+  padding-top: 60px;
+}
+
+.section-distributors h1 {
+  text-align: center;
+}
+
+.world-map {
+  width: 90vw;
+  height: 70vh;
+  float: right;
+  margin-right: 5%;
+}
+
+@-webkit-keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(calc(-250px * 10));
+  }
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(calc(-250px * 10));
+  }
+}
+
+.slider {
+  background: white;
+  height: 130px;
+  margin: auto;
+  top: 50px;
+  overflow: hidden;
+  position: relative;
+  width: 100vw;
+}
+
+.slider::before,
+.slider::after {
+  content: '';
+  height: 100px;
+  position: absolute;
+  width: 200px;
+  z-index: 2;
+}
+
+.slider::after {
+  right: 0;
+  top: 0;
+  transform: rotateZ(180deg);
+}
+
+.slider::before {
+  left: 0;
+  top: 0;
+}
+
+.slider .slide-track {
+  -webkit-animation: scroll 40s linear infinite;
+  animation: scroll 40s linear infinite;
+  display: flex;
+  width: calc(250px * 14);
+}
+
+.slider .slide {
+  height: 100px;
+  width: 250px;
+}
+
+.slide {
+  height: 150px;
+  text-align: center;
+}
+
+.aeration-logo {
+  margin-top: 20px;
+}
+
+.scubla-logo {
+  margin-top: 20px;
+}
+
+/* ----------------------------------------------- */
+/* CONTACT */
+/* ----------------------------------------------- */
+
+.section-contact {
+  margin-top: 20px;
+  padding-top: 2px;
+  background-color: #f4f4f4;
+}
+
+.section-contact h1 {
+  text-align: center;
+}
+
+.contact-form {
+  width: 60%;
+  margin: 20px auto;
+}
+
+label {
+  font-weight: 400;
+}
+
+input[type='text'],
+input[type='email'],
+select,
+textarea {
+  width: 100%;
+  padding: 7px;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+}
+
+textarea {
+  height: 100px;
+}
+
+input[type='checkbox'] {
+  margin: 10px 5px 10px 0;
+}
+
+*:focus {
+  outline: none;
+}
+
+input[type='submit'] {
+  display: inline-block;
+  padding: 10px 30px;
+  font-weight: 300;
+  text-decoration: none;
+  border-radius: 200px;
+  transition: background-color 0.2s, border 0.2s, color 0.2s;
+}
+
+input[type='submit'] {
+  background-color: #0083bd;
+  border: 1px solid #0083bd;
+  color: #fff;
+  margin-right: 15px;
+  margin-top: 10px;
+}
+
+input[type='submit']:hover,
+input[type='submit']:active {
+  background-color: #045e86;
+}
+
+.form-messages {
+  width: 70%;
+  margin: 0 auto;
+  padding: 10px;
+  border-radius: 3px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.success {
+  background-color: rgba(38, 191, 68, 0.79);
+}
+
+.error {
+  background-color: rgba(209, 46, 46, 0.8);
+}
+
+/* ----------------------------------------------- */
+/* FOOTER */
+/* ----------------------------------------------- */
+
+footer {
+  background-color: rgba(0, 40, 57, 0.38);
+  padding-left: 15%;
+}
+
+.terms-list {
+  list-style: none;
+  font-size: 85%;
+}
+
+.terms-list a {
+  text-decoration: none;
+}
+
+.company-info {
+  font-size: 75%;
+  margin: 10px 5px;
+}
+
+.company-info-icon {
+  font-size: 145%;
+  margin-right: 10px;
+  display: inline-block;
+  float: left;
+}
+
+/* ----------------------------------------------- */
+/* Animations */
+/* ----------------------------------------------- */
+
+.js--wp-1,
+.js--wp-2 {
+  opacity: 0;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+}
+
+.js--wp-3,
+.js--wp-4 {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+}
+
+.js--wp-1.animated,
+.js--wp-2.animated {
+  opacity: 1;
+}
+
+/* ----------------------------------------------- */
+/* POPUP BOX */
+/* ----------------------------------------------- */
+
+.popup {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(1.1);
+  transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+}
+
+.popup-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 1rem 1.5rem;
+  width: 65vw;
+  height: 65vh;
+  border-radius: 0.5rem;
+  overflow-y: scroll;
+}
+
+.close-button {
+  float: right;
+  width: 1.5rem;
+  line-height: 1.5rem;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 0.25rem;
+  background-color: lightgray;
+}
+
+.close-button:hover {
+  background-color: darkgray;
+}
+
+.show-popup {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
+  transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+}
+
+gm-map {
+  display: block;
+  width: 100%;
+  height: 300px;
+}
+
+/* ----------------------------------------------- */
+/* BIOCARE INFO */
+/* ----------------------------------------------- */
+
+.biocare-info {
+  text-align: center;
+}
+
+.biocare-info img {
+  margin-top: 4%;
+}
+
+.biocare-info-list {
+  margin: 3% 0 7% 0;
+}
+
+.biocare-info-list span {
+  font-weight: 600;
+}
+
+.privacy-policy {
+  padding: 5% 10% 5% 10%;
+}
+
+.privacy-policy h2 {
+  padding-top: 2%;
+}

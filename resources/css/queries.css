@@ -1,0 +1,391 @@
+@media only screen and (max-width: 1580px) {
+  .popup-content {
+    overflow: scroll;
+  }
+
+  .description {
+    padding: 0 60px;
+  }
+
+  .technical-data {
+    padding: 10px 50px 50px 60px;
+    margin-left: 0;
+  }
+
+  .item span {
+    padding-top: 20%;
+  }
+}
+
+@media only screen and (max-width: 1350px) {
+  .main-nav {
+    margin-right: 10px;
+  }
+
+  .description {
+    padding: 0 100px;
+  }
+
+  .technical-data {
+    padding: 10px 0 0 60px;
+    margin-left: 10%;
+  }
+
+  .item span {
+    font-size: 3rem;
+  }
+}
+
+/* Big tablet to 1200px (widths smaller taht the 1140px row) */
+@media only screen and (max-width: 1200px) {
+  .hero-text-box {
+    width: 50%;
+    padding: 0 2%;
+  }
+
+  .item span {
+    font-size: 2.5rem;
+  }
+
+  .row {
+    padding: 0 2%;
+    width: 100%;
+  }
+
+  .pop-img {
+    margin-top: 1px;
+    width: 250px;
+    height: auto;
+  }
+
+  .main-nav {
+    margin-top: 50px;
+  }
+
+  .main-nav li {
+    margin-right: 15px;
+  }
+
+  .logo-main {
+    padding: 15px 0 0 15px;
+  }
+
+  .col-product {
+    width: 300px;
+    height: 400px;
+  }
+
+  .popup-content {
+    overflow: scroll;
+  }
+
+  .technical-data {
+    padding: 10px 0 0 60px;
+    margin-left: 0;
+  }
+
+  .custom-gallery {
+    margin-top: 7%;
+  }
+
+  .custom-gallery img {
+    width: 200px;
+    height: auto;
+  }
+
+  .section-distributors {
+    height: 400px;
+  }
+}
+
+@media only screen and (max-width: 1051px) {
+  .diffusers,
+  .steel {
+    width: 45em;
+    height: 14em;
+  }
+  .diffusers {
+    background-image: url(../img/diffusers-tablet.jpg);
+  }
+  .steel {
+    background-image: url(../img/ss-steel-tablet.jpg);
+  }
+
+  .diffusers__heading,
+  .diffusers__steel {
+    font-size: 2.7rem;
+  }
+
+  .first-video-apx,
+  .second-video-apx,
+  .first-video-opx,
+  .second-video-opx {
+    margin: 0;
+  }
+
+  .airprax-videos,
+  .oxyprax-videos {
+    display: grid;
+    justify-content: center;
+    margin: 0;
+  }
+}
+
+@media only screen and (max-width: 1023px) {
+  body {
+    font-size: 16px;
+  }
+
+  /* Main navi */
+  .main-nav {
+    margin-top: 20px;
+    margin-right: 15px;
+  }
+
+  .main-nav li {
+    margin-right: 10px;
+  }
+
+  .social-icons li {
+    display: none;
+  }
+
+  .logo-main {
+    float: left;
+    width: 10%;
+    height: auto;
+    padding: 10px 0 0 10px;
+  }
+
+  /* Sticky navi */
+
+  .sticky .main-nav {
+    margin-top: 20px;
+    font-size: 100%;
+  }
+
+  .sticky .logo-main {
+    width: 8%;
+  }
+
+  .sticky .social-icons li {
+    display: none;
+  }
+
+  .about-cols div {
+    padding: 10px;
+  }
+
+  /* PRODUCTS */
+
+  .microbubbles-content p {
+    padding: 33px 60px;
+    font-weight: 300;
+  }
+
+  .world-map {
+    display: none;
+  }
+
+  .distributors-logos:first-child {
+    margin-left: 100px;
+  }
+
+  .distributors-logos {
+    position: relative;
+  }
+
+  .distributors-logos div {
+    margin: 20px;
+    width: 40%;
+  }
+}
+
+/* Small phones to small tablets: from 481px to 767px */
+@media only screen and (max-width: 767px) {
+  section {
+    padding: 0 0;
+  }
+
+  .section-big-pictures {
+    height: 50vh;
+    padding-bottom: 0px;
+    padding: 0;
+    margin-top: 40px;
+  }
+
+  .item span {
+    font-size: 1.5rem;
+  }
+
+  .main-nav {
+    display: none;
+  }
+
+  .mobile-nav-icon {
+    display: inline-block;
+  }
+
+  .main-nav {
+    float: left;
+    height: 50vh;
+    overflow-y: scroll;
+  }
+
+  .sticky .main-nav {
+    float: left;
+    margin-left: 20px;
+  }
+
+  .main-nav li {
+    display: block;
+    padding: 0.5em 0;
+  }
+
+  .main-nav li a:link,
+  .main-nav li a:visited {
+    display: block;
+    border: 0;
+    padding: 3px 0;
+    font-size: 90%;
+  }
+
+  .logo-main {
+    float: left;
+    width: 13%;
+    height: auto;
+    padding: 0;
+    margin: 20px 20px 0 0;
+  }
+
+  .sticky .logo-main {
+    width: 60px;
+    margin: 5px;
+  }
+
+  .mob-icon {
+    display: block;
+  }
+
+  .navbar-toggler {
+    display: block;
+  }
+
+  /* PRODUCTS */
+  .diffusers,
+  .steel {
+    width: 29em;
+  }
+
+  .diffusers__heading,
+  .diffusers__steel {
+    text-align: center;
+  }
+
+  .section-products {
+    height: auto;
+  }
+
+  .microbubbles-content p {
+    padding: 33px 20px;
+    font-weight: 300;
+  }
+
+  iframe {
+    width: 450px;
+    height: 255px;
+  }
+
+  .contact-form {
+    width: 100%;
+    margin: 20px auto;
+  }
+
+  label {
+    margin-top: 15px;
+  }
+
+  .distributors-logos {
+    position: relative;
+  }
+
+  .distributors-logos div {
+    margin: 10px;
+    width: 40%;
+  }
+
+  .cookies {
+    height: 45px;
+  }
+}
+
+/* Small phones: from 0 to 480px */
+@media only screen and (max-width: 480px) {
+  section {
+    padding: 25px 0;
+  }
+
+  .section-big-pictures {
+    height: auto;
+  }
+
+  /* Products */
+  .diffusers,
+  .steel {
+    width: 18em;
+  }
+  .diffusers {
+    background-image: url(../img/diffusers-mobile.jpg);
+  }
+  .steel {
+    background-image: url(../img/ss-steel-mobile.jpg);
+  }
+
+  .diffusers__heading,
+  .diffusers__steel {
+    font-size: 1.7rem;
+  }
+  .item span {
+    font-size: 1rem;
+  }
+
+  .contact-form {
+    width: 100%;
+  }
+
+  .distributors-logos {
+    display: grid;
+    justify-content: center;
+    margin-left: 0 !important;
+  }
+
+  .distributors-logos div {
+    width: 100%;
+    margin-top: 20px;
+    padding: 0;
+    text-align: center;
+  }
+
+  iframe {
+    width: 250px;
+    height: 150px;
+  }
+
+  .description {
+    padding: 10px;
+  }
+
+  .technical-data {
+    padding-left: 0;
+    margin-left: 0;
+  }
+
+  .technical-data span {
+    margin-right: 15%;
+    float: right;
+  }
+
+  .cookies {
+    height: 65px;
+  }
+}
